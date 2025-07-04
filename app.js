@@ -7,7 +7,7 @@ app.use(bodyParser.json());
 app.post('/getResponse', async (req, res) => {
   try {
     const { GoogleGenerativeAI } = await import('@google/generative-ai'); // dynamic import
-    const genAI = new GoogleGenerativeAI("AIzaSyAumLRZMbcGFQV4XaMuOH5X0xCzut6IkII");
+    const genAI = new GoogleGenerativeAI("ADD_API_KEY");
 
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
     const result = await model.generateContent(req.body.question);
