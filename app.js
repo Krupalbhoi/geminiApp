@@ -20,7 +20,7 @@ app.post('/getResponse', async (req, res) => {
   }
 });
 
-app.use('*', () => {
+app.use('*', (req, res) => {
   res.status(404).json({
     msg: 'bad request'
   })
