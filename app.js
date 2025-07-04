@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const app = express();
 app.use(bodyParser.json());
 
-app.post('/', async (req, res) => {
+app.post('/getResponse', async (req, res) => {
   try {
     const { GoogleGenerativeAI } = await import('@google/generative-ai'); // dynamic import
     const genAI = new GoogleGenerativeAI("AIzaSyAumLRZMbcGFQV4XaMuOH5X0xCzut6IkII");
